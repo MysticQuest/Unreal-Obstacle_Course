@@ -19,4 +19,8 @@ void AMovingPlatform::BeginPlay()
 void AMovingPlatform::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+	FVector currentLocation = GetActorLocation();
+	currentLocation.X = currentLocation.X + 1;
+	SetActorLocation(currentLocation);
 }
