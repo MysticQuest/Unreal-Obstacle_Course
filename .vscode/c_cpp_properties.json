@@ -1,0 +1,19 @@
+{
+    "configurations": [
+        {
+            "name": "Obstacle_CourseEditor Editor Win64 Development (Obstacle_Course)",
+            "intelliSenseMode": "msvc-x64",
+            "compileCommands": "X:\\Repositories\\Unreal\\Obstacle_Course\\.vscode\\compileCommands_Obstacle_Course.json",
+            "cStandard": "c17",
+            "cppStandard": "c++17"
+        },
+        {
+            "name": "Win32",
+            "intelliSenseMode": "msvc-x64",
+            "compileCommands": "X:\\Repositories\\Unreal\\Obstacle_Course\\.vscode\\compileCommands_Default.json",
+            "cStandard": "c17",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}

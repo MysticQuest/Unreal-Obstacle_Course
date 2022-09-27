@@ -1,0 +1,27 @@
+[
+	{
+		"file": "X:\\Repositories\\Unreal\\Obstacle_Course\\Source\\Obstacle_Course\\MovingPlatform.cpp",
+		"command": "\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\cl.exe\" @X:\\Repositories\\Unreal\\Obstacle_Course\\.vscode\\compileCommands_Obstacle_Course\\Obstacle_Course.205.rsp",
+		"directory": "X:\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "X:\\Repositories\\Unreal\\Obstacle_Course\\Source\\Obstacle_Course\\MovingPlatform.h",
+		"command": "\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\cl.exe\" @X:\\Repositories\\Unreal\\Obstacle_Course\\.vscode\\compileCommands_Obstacle_Course\\Obstacle_Course.205.rsp",
+		"directory": "X:\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "X:\\Repositories\\Unreal\\Obstacle_Course\\Source\\Obstacle_Course\\Obstacle_Course.Build.cs",
+		"command": "\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\cl.exe\" @X:\\Repositories\\Unreal\\Obstacle_Course\\.vscode\\compileCommands_Obstacle_Course\\Obstacle_Course.205.rsp",
+		"directory": "X:\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "X:\\Repositories\\Unreal\\Obstacle_Course\\Source\\Obstacle_Course\\Obstacle_Course.cpp",
+		"command": "\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\cl.exe\" @X:\\Repositories\\Unreal\\Obstacle_Course\\.vscode\\compileCommands_Obstacle_Course\\Obstacle_Course.205.rsp",
+		"directory": "X:\\UE_5.0\\Engine\\Source"
+	},
+	{
+		"file": "X:\\Repositories\\Unreal\\Obstacle_Course\\Source\\Obstacle_Course\\Obstacle_Course.h",
+		"command": "\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.33.31629\\bin\\HostX64\\x64\\cl.exe\" @X:\\Repositories\\Unreal\\Obstacle_Course\\.vscode\\compileCommands_Obstacle_Course\\Obstacle_Course.205.rsp",
+		"directory": "X:\\UE_5.0\\Engine\\Source"
+	}
+]
