@@ -14,6 +14,7 @@ class OBSTACLE_COURSE_API AMovingPlatform : public AActor
 public:
 	// Sets default values for this actor's properties
 	AMovingPlatform();
+	AMovingPlatform(const FObjectInitializer& ObjectInitializer);
 
 protected:
 	// Called when the game starts or when spawned
@@ -22,4 +23,14 @@ protected:
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
+	FVector _startLocation;
+	float _distanceMoved;
+
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "Mesh Swap")
+		UStaticMeshComponent* StaticMesh;
+	UPROPERTY(EditAnywhere, Category = "Moving Platform")
+		float _maxDistanceToMove = 100;
+	UPROPERTY(EditAnywhere, Category = "Moving Platform")
+		FVector _velocity = FVector(100, 0, 0);
 };
