@@ -23,4 +23,5 @@ void AMovingPlatform::Tick(float DeltaTime)
 	FVector currentLocation = GetActorLocation();
 	currentLocation.X = currentLocation.X + 1;
 	SetActorLocation(currentLocation);
+	//test commit
 }
