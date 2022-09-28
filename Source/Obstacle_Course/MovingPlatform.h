@@ -24,6 +24,9 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 	void Timer();
+	void MovePlatform(float DeltaTime);
+	void ReversePlatform();
+
 	FTimerHandle TimerHandle;
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "Mesh Swap")
 		UStaticMeshComponent* StaticMesh;

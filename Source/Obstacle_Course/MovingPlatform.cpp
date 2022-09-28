@@ -23,7 +23,6 @@ AMovingPlatform::AMovingPlatform(const FObjectInitializer& ObjectInitializer)
 void AMovingPlatform::BeginPlay()
 {
 	Super::BeginPlay();
-
 	_startLocation = GetActorLocation();
 }
 
@@ -31,13 +30,21 @@ void AMovingPlatform::BeginPlay()
 void AMovingPlatform::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	MovePlatform(DeltaTime);
+}
 
+void AMovingPlatform::MovePlatform(float DeltaTime) 
+{
 	FVector currentLocation = GetActorLocation();
 	currentLocation = currentLocation + _velocity * DeltaTime;
 	SetActorLocation(currentLocation);
-
 	_distanceMoved = FVector::Dist(_startLocation, currentLocation);
 
+	ReversePlatform();
+}
+
+void AMovingPlatform::ReversePlatform()
+{
 	if (_distanceMoved > _maxDistanceToMove)
 	{
 		FVector moveDirection = _velocity.GetSafeNormal();
