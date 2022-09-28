@@ -23,7 +23,8 @@ protected:
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
+	void Timer();
+	FTimerHandle TimerHandle;
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "Mesh Swap")
 		UStaticMeshComponent* StaticMesh;
 	UPROPERTY(EditAnywhere, Category = "Moving Platform")

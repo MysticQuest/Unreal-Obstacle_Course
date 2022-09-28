@@ -2,17 +2,22 @@
 
 #include "MovingPlatform.h"
 
-// Sets default values
+ //Sets default values
 AMovingPlatform::AMovingPlatform(const FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer)
 {
-
-
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
 	StaticMesh = ObjectInitializer.CreateOptionalDefaultSubobject<UStaticMeshComponent>(this, TEXT("NameYourComponentHere"));
 }
+
+// Sets default values
+//AMovingPlatform::AMovingPlatform()
+//{
+//	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+//	PrimaryActorTick.bCanEverTick = true;
+//}
 
 // Called when the game starts or when spawned
 void AMovingPlatform::BeginPlay()
@@ -41,12 +46,16 @@ void AMovingPlatform::Tick(float DeltaTime)
 		_initialVelocity = _velocity;
 		_velocity = FVector(0, 0, 0);
 
-		_timer += FDateTime::UtcNow().GetMillisecond() / 1000;
+		GetWorldTimerManager().SetTimer(TimerHandle, this, &AMovingPlatform::Timer, 1.f, true, 0.0);
+	}
+}
 
-		if (_timer < _timerDelay)
-		{
-			_velocity = -_initialVelocity;
-			_timer = 0;
-		}
+void AMovingPlatform::Timer()
+{
+	_timer++;
+	if (_timer > _timerDelay) 
+	{	
+		_velocity = -_initialVelocity;
+		_timer = 0;
 	}
 }
