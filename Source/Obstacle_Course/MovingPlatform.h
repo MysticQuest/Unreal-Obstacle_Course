@@ -24,13 +24,20 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	FVector _startLocation;
-	float _distanceMoved;
-
 	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "Mesh Swap")
 		UStaticMeshComponent* StaticMesh;
 	UPROPERTY(EditAnywhere, Category = "Moving Platform")
 		float _maxDistanceToMove = 100;
 	UPROPERTY(EditAnywhere, Category = "Moving Platform")
 		FVector _velocity = FVector(100, 0, 0);
+	UPROPERTY(EditAnywhere, Category = "Moving Platform")
+		float _timerDelay = 0;
+	UPROPERTY(VisibleAnywhere, Category = "Moving Platform")
+		float _timer = 0;
+	UPROPERTY(VisibleAnywhere, Category = "Moving Platform")
+		FVector _initialVelocity;
+	UPROPERTY(VisibleAnywhere, Category = "Moving Platform")
+		float _distanceMoved = 0;
+	UPROPERTY(VisibleAnywhere, Category = "Moving Platform")
+		FVector _startLocation;
 };

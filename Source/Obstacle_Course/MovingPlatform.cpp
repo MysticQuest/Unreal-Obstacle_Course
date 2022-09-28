@@ -33,11 +33,20 @@ void AMovingPlatform::Tick(float DeltaTime)
 
 	_distanceMoved = FVector::Dist(_startLocation, currentLocation);
 
-	if (_distanceMoved > _maxDistanceToMove) 
+	if (_distanceMoved > _maxDistanceToMove)
 	{
 		FVector moveDirection = _velocity.GetSafeNormal();
 		_startLocation = _startLocation + moveDirection * _maxDistanceToMove;
 		SetActorLocation(_startLocation);
-		_velocity = -_velocity;
+		_initialVelocity = _velocity;
+		_velocity = FVector(0, 0, 0);
+
+		_timer += FDateTime::UtcNow().GetMillisecond() / 1000;
+
+		if (_timer < _timerDelay)
+		{
+			_velocity = -_initialVelocity;
+			_timer = 0;
+		}
 	}
 }
